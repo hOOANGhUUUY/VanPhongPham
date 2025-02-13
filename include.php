@@ -11,8 +11,11 @@ require_once 'services/categoryService.php';
 require_once 'services/bannerService.php';
 require_once 'services/userService.php';
 
+require_once 'middlewares/authMiddleware.php';
+
 require_once 'controllers/HomeController.php';
 require_once 'controllers/userController.php';
+require_once 'controllers/adminController.php';
 
 require_once 'views/homeView.php';
 

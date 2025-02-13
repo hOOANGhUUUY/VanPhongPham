@@ -4,6 +4,10 @@
 return [
     '' => [
         'controller' => 'HomeController',
+        'method' => 'auth'
+    ],
+    'quan-tri' => [
+        'controller' => 'HomeController',
         'method' => 'index'
     ],
     'about' => [

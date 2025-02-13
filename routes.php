@@ -22,7 +22,13 @@ return [
         'controller' => 'UserController',
         'method' => 'logout'
     ],
-    
+    'admin' => [
+        'controller' => 'AdminController',
+        'method' => 'index',
+        'middleware' => 'admin'
+    ],
+
+
 ];
 
 // 'user/:id' => [

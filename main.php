@@ -10,6 +10,7 @@ $uri = trim($requestUri, '/');
 
 // Tìm route phù hợp
 $routeFound = false;
+
 ?>
 
 <?php
@@ -24,7 +25,12 @@ $routeFound = false;
         // array_shift($matches); 
         $controllerName = $action['controller'];
         $methodName = $action['method'];
-
+        // xử lý admin
+        if (isset($action['middleware'])) {
+            if ($action['middleware'] === 'admin') {
+                AuthMiddleware::checkAdmin(); // Chặn user không phải admin
+            }
+        }
         // Gọi controller và phương thức
         if (class_exists($controllerName) && method_exists($controllerName, $methodName)) {
             $controller = new $controllerName();

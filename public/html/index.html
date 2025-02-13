@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/Grid.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .col {
+            text-align: center;
+            /* background-color: #ccc; */
+            background-clip: content-box;
+            /* margin-top: 8px;
+            margin-bottom: 8px; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class="bannerTop_and_menu">
+            <div class="bannerTop">
+                <div class="grid wide">
+                    <section class="row home_banner">
+                        <div class="col l-12 m-0 c-0 banner">
+                            <div class="home_banner_top">
+                                <img src="img/LDPCTT1_herobanner15.01_Resize_1263x60.webp" alt="">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="home_menu_top">
+            <div class="grid wide">
+                <section class="row home_menu">
+                    <div class="col l-2 m-12 c-12 logo">
+                        <div class="home_logo">
+                            <img src="img/fahasa-logo.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="col l-1 m-2 c-2 menu">
+                        <div class="home_category">
+                            <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_menu.svg"
+                                alt="Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px; margin-left: 10px; vertical-align: middle;">
+
+                            <div class="sub_category_top">
+                                <div class="box_sub">
+                                    <ul id="menu-list">
+                                        <li class="menu-item" data-target="cate-1">Sách trong nước</li>
+                                        <li class="menu-item" data-target="cate-2">Danh mục1</li>
+                                        <li class="menu-item" data-target="cate-3">Danh mục2</li>
+                                    </ul>
+
+                                    <div class="grid wide detail_cate">
+                                        <div id="cate-1" class="detail-category row">
+                                            <div class="col l-3 m-4 c-6">
+                                                <div class="detail">
+                                                    <h6>Văn học</h6>
+                                                    <div class="cate">
+                                                        <span>Tiểu thuyết</span>
+                                                        <span>Ngôn tình</span>
+                                                    </div>
+                                                    <div class="xem_them">
+                                                        <a href="#">Xem thêm</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-3 m-4 c-6">
+                                                <div class="detail">
+                                                    <h6>Kinh tế</h6>
+                                                    <div class="cate">
+                                                        <span>Kinh doanh</span>
+                                                        <span>Đầu tư</span>
+                                                    </div>
+                                                    <div class="xem_them">
+                                                        <a href="#">Xem thêm</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="cate-2" class="detail-category row">
+                                            <div class="col l-3 m-4 c-6">
+                                                <div class="detail">
+                                                    <h6>Khoa học</h6>
+                                                    <div class="cate">
+                                                        <span>Vật lý</span>
+                                                        <span>Hóa học</span>
+                                                    </div>
+                                                    <div class="xem_them">
+                                                        <a href="#">Xem thêm</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="cate-3" class="detail-category">
+                                            <div class="col l-3 m-4 c-6">
+                                                <div class="detail">
+                                                    <h6>Xã hội</h6>
+                                                    <div class="cate">
+                                                        <span>Chính trị</span>
+                                                        <span>Kinh tế</span>
+                                                    </div>
+                                                    <div class="xem_them">
+                                                        <a href="#">Xem thêm</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l-6 m-8 c-6 menu search">
+                        <div class="home_search">
+                            <span><i class="fa-solid fa-search"></i></span>
+                            <input type="text" placeholder="Tìm kiếm">
+                        </div>
+                    </div>
+                    <div class="col l-1 m-0 c-0 menu">
+                        <div class="home_notification">
+                            <span><i class="fa-solid fa-bell"></i></span>
+                            <span>Thông báo</span>
+                        </div>
+                    </div>
+                    <div class="col l-1 m-1 c-2 menu">
+                        <div class="home_cart">
+                            <span><i class="fa-solid fa-shopping-cart"></i></span>
+                            <span>Giỏ hàng</span>
+                        </div>
+                    </div>
+
+
+                    <div class="col l-1 m-1 c-2 menu">
+                        <div class="home_account">
+                            <span><i class="fa-solid fa-user"></i></span>
+                            Tài khoản
+                            <!-- Sub-account hiển thị khi hover vào "Tài khoản" -->
+                            <div class="sub-account">
+                                <ul>
+                                    <li class="login"><a href="#login">Đăng Nhập</a></li>
+                                    <li class="register"><a href="#register">Đăng Ký</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </section>
+            </div>
+        </div>
+        <!-- đăng nhập   -->
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-12 m-12 c-12">
+                    <div class="login-overlay hidden" id="login-overlay">
+                        <div class="login-box">
+                            <h2>Đăng Nhập</h2>
+                            <form id="login-form">
+                                <div class="login-input-group">
+                                    <label for="login-email">Email</label>
+                                    <input type="email" id="login-email" class="login-input" required>
+                                </div>
+                                <div class="login-input-group password-container">
+                                    <label for="login-password">Mật khẩu</label>
+                                    <input type="password" id="login-password" class="login-input" required>
+                                    <i class="fa-solid fa-eye login-toggle-password" id="login-toggle-password"></i>
+                                </div>
+                                <button type="submit" class="login-btn">Đăng Nhập</button>
+                                <div class="login-forgot-password">
+                                    <a href="#">Quên mật khẩu?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- đăng nhập   -->
+
+
+        <!-- đăng ký  -->
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-12 m-12 c-12">
+                    <div class="register-overlay hidden" id="register-overlay">
+                        <!-- Hộp đăng ký -->
+                        <div class="register-box">
+                            <h2>Đăng Ký</h2>
+                            <form id="register-form">
+                                <!-- Nhập họ tên -->
+                                <div class="register-input-group">
+                                    <label for="register-name">Họ và Tên</label>
+                                    <input type="text" id="register-name" class="register-input"
+                                        placeholder="Nhập họ và tên" required>
+                                </div>
+                                <!-- Nhập email -->
+                                <div class="register-input-group">
+                                    <label for="register-email">Email</label>
+                                    <input type="email" id="register-email" class="register-input"
+                                        placeholder="Nhập email" required>
+                                </div>
+                                <!-- Nhập số điện thoại -->
+                                <div class="register-input-group">
+                                    <label for="register-phone">Số điện thoại</label>
+                                    <input type="text" id="register-phone" class="register-input"
+                                        placeholder="Nhập số điện thoại" required>
+                                </div>
+                                <!-- Nhập mật khẩu -->
+                                <div class="register-input-group password-container">
+                                    <label for="register-password">Mật khẩu</label>
+                                    <input type="password" id="register-password" class="register-input"
+                                        placeholder="Nhập mật khẩu" required>
+                                    <i class="fa-solid fa-eye register-toggle-password"
+                                        id="register-toggle-password"></i>
+                                </div>
+                                <!-- Nhập lại mật khẩu -->
+                                <div class="register-input-group password-container">
+                                    <label for="register-password-repeat">Nhập lại mật khẩu</label>
+                                    <input type="password" id="register-password-repeat" class="register-input"
+                                        placeholder="Nhập lại mật khẩu" required>
+                                    <i class="fa-solid fa-eye register-toggle-password"
+                                        id="register-toggle-password-repeat"></i>
+                                </div>
+                                <button type="submit" class="register-btn">Đăng Ký</button>
+                                <div class="register-forgot-password">
+                                    <a href="#">Quên mật khẩu?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- đăng ký  -->
+        <div class="grid wide">
+            <section class="row home_banner_big">
+                <div class="col l-8 m-12 c-12">
+                    <div class="banner_big">
+                        <div class="slides">
+                            <img src="img/thanhtoankhongtienmat_840x320.webp" alt="Slide 1">
+                            <img src="img/thanhtoankhongtienmat_840x320.webp" alt="Slide 2">
+                            <img src="img/thanhtoankhongtienmat_840x320.webp" alt="Slide 3">
+                        </div>
+                        <div class="dots">
+                            <span class="dot" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-4 m-0 c-0 box_sub_banner">
+                    <div class="sub_banner">
+                        <div class="box_image">
+                            <img src="img/UuDai_T1_392x156.webp" alt="">
+                        </div>
+                        <div class="box_image">
+                            <img src="img/UuDai_T1_392x156.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <main>
+            <div class="grid wide">
+                <section class="row">
+                    <div class="col l-3 m-0 c-0 box_flash_sale">
+                        <a href="#">
+                            <img src="img/LDPCTT1_flashsale_resize_310x210_2.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="col l-3 m-0 c-0 box_flash_sale">
+                        <a href="#">
+                            <img src="img/LDPCTT1_flashsale_resize_310x210_2.webp" alt="">
+
+                        </a>
+                    </div>
+                    <div class="col l-3 m-0 c-0 box_flash_sale">
+                        <a href="#">
+                            <img src="img/LDPCTT1_flashsale_resize_310x210_2.webp" alt="">
+
+                        </a>
+                    </div>
+                    <div class="col l-3 m-0 c-0 box_flash_sale">
+                        <a href="#">
+                            <img src="img/LDPCTT1_flashsale_resize_310x210_2.webp" alt="">
+
+                        </a>
+                    </div>
+                </section>
+
+                <section class="genres">
+                    <div class="grid wide">
+                        <div class="box_item row">
+                            <div class="item col l-2 m-2 c-2">
+                                <img src="img/Icon_1501_120x120_1.png" alt="">
+                                <span>Săn sale tết sang</span>
+                            </div>
+                            <div class="item col l-2 m-2 c-2">
+                                <img src="img/Icon_1501_120x120_1.png" alt="">
+                                <span>Săn sale tết sang</span>
+                            </div>
+                            <div class="item col l-2 m-2 c-2">
+                                <img src="img/Icon_1501_120x120_1.png" alt="">
+                                <span>Săn sale tết sang</span>
+                            </div>
+                            <div class="item col l-2 m-2 c-2">
+                                <img src="img/Icon_1501_120x120_1.png" alt="">
+                                <span>Săn sale tết sang</span>
+                            </div>
+                            <div class="item col l-2 m-2 c-2">
+                                <img src="img/Icon_1501_120x120_1.png" alt="">
+                                <span>Săn sale tết sang</span>
+                            </div>
+                            <div class="item col l-2 m-2 c-2">
+                                <img src="img/Icon_1501_120x120_1.png" alt="">
+                                <span>Săn sale tết sang</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <section class="flash_sale_slide">
+                <div class="grid wide">
+                    <div class="flash_top">
+                        <h1>Flash sale</h1>
+                        <a href="#">Xem tất cả</a>
+                    </div>
+                    <div class="row ">
+                        <div class="col l-3 m-3 c-4">
+                            <div class="product">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                            alt="Product">
+                                    </div>
+                                </a>
+                                <div class="product-info">
+                                    <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                    <div class="price">
+                                        <span class="sale-price">200,000 VND</span>
+                                        <span class="discount">-20%</span>
+                                    </div>
+                                    <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                    <!-- Thanh đã bán -->
+                                    <div class="sold">
+                                        <label for="sold-progress">Đã bán: 150</label>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 60%;"></div>
+                                            <!-- 60% có thể thay đổi -->
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-details">
+                                            <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                        </div>
+                                        <div class="icon-cart">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                            <!-- Icon thêm vào giỏ hàng -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-3 c-4">
+                            <div class="product">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                            alt="Product">
+                                    </div>
+                                </a>
+                                <div class="product-info">
+                                    <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                    <div class="price">
+                                        <span class="sale-price">200,000 VND</span>
+                                        <span class="discount">-20%</span>
+                                    </div>
+                                    <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                    <!-- Thanh đã bán -->
+                                    <div class="sold">
+                                        <label for="sold-progress">Đã bán: 150</label>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 60%;"></div>
+                                            <!-- 60% có thể thay đổi -->
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-details">
+                                            <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                        </div>
+                                        <div class="icon-cart">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                            <!-- Icon thêm vào giỏ hàng -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-3 c-4">
+                            <div class="product">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                            alt="Product">
+                                    </div>
+                                </a>
+                                <div class="product-info">
+                                    <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                    <div class="price">
+                                        <span class="sale-price">200,000 VND</span>
+                                        <span class="discount">-20%</span>
+                                    </div>
+                                    <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                    <!-- Thanh đã bán -->
+                                    <div class="sold">
+                                        <label for="sold-progress">Đã bán: 150</label>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 60%;"></div>
+                                            <!-- 60% có thể thay đổi -->
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-details">
+                                            <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                        </div>
+                                        <div class="icon-cart">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                            <!-- Icon thêm vào giỏ hàng -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-3 c-4">
+                            <div class="product">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                            alt="Product">
+                                    </div>
+                                </a>
+                                <div class="product-info">
+                                    <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                    <div class="price">
+                                        <span class="sale-price">200,000 VND</span>
+                                        <span class="discount">-20%</span>
+                                    </div>
+                                    <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                    <!-- Thanh đã bán -->
+                                    <div class="sold">
+                                        <label for="sold-progress">Đã bán: 150</label>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 60%;"></div>
+                                            <!-- 60% có thể thay đổi -->
+                                        </div>
+                                    </div>
+                                    <div class="icons">
+                                        <div class="icon-details">
+                                            <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                        </div>
+                                        <div class="icon-cart">
+                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                            <!-- Icon thêm vào giỏ hàng -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- sự kiện  -->
+            <section class="grid wide">
+                <div class="row new_event" style="background-image: url('img/Web_BlockTet2025_v2.webp')">
+                    <div class="col l-12 m-12 c-12">
+                        <div class="title"></div>
+                        <div class="slideshow-container">
+                            <div class="box_content_event">
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <div class="product product_event">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp"
+                                                alt="Product">
+                                        </div>
+                                    </a>
+                                    <div class="product-info">
+                                        <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                        <div class="price">
+                                            <span class="sale-price">200,000 VND</span>
+                                            <span class="discount">-20%</span>
+                                        </div>
+                                        <div class="original-price">Giá gốc: 250,000 VND</div>
+                                    </div>
+                                </div>
+                                <!-- Thêm các sản phẩm khác -->
+                            </div>
+                            <!-- Nút điều hướng -->
+                            <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- sản phẩm bán chạy  -->
+            <div class="grid wide ">
+
+                <div class="row box_best_seller">
+                    <div class="col l-12 m-12 c-12 box_title">
+                        <h3>Sản phẩm bán chạy</h3>
+                    </div>
+                    <div class="col l-3 m-3 c-4">
+                        <div class="product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <label for="sold-progress">Đã bán: 150</label>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 60%;"></div> <!-- 60% có thể thay đổi -->
+                                    </div>
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col l-3 m-3 c-4">
+                        <div class="product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <label for="sold-progress">Đã bán: 150</label>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 60%;"></div> <!-- 60% có thể thay đổi -->
+                                    </div>
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col l-3 m-3 c-4">
+                        <div class="product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <label for="sold-progress">Đã bán: 150</label>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 60%;"></div> <!-- 60% có thể thay đổi -->
+                                    </div>
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col l-3 m-3 c-4">
+                        <div class="product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <label for="sold-progress">Đã bán: 150</label>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 60%;"></div> <!-- 60% có thể thay đổi -->
+                                    </div>
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col l-12 m-12 c-12 box_btn">
+                        <a href="#">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <section class="grid wide">
+                <div class="row category_desktop">
+                    <div class="title">
+                        <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_menu.svg" alt="Icon"
+                            style="width: 40px; height: 40px; margin-right: 10px; margin-left: 10px; vertical-align: middle;">
+                        <h3>Danh mục sản phẩm</h3>
+                    </div>
+                    <div class="hr_item"></div>
+                    <div class="grid wide">
+                        <div class="row">
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                            <div class="col l-1 m-0 c-0 box_category_item">
+                                <a href="#">
+                                    <img src="img/image_1_.webp" alt="">
+                                    <span>Thú Bông</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="grid wide">
+                <div class="row box_product_title">
+                    <div class="col l-12 m-12 c-12 box_title">
+                        <div class="title">
+                            <h3>Sản phẩm mới</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col l-2-4 m-3 c-6">
+                        <div class="product new_product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <span>Đã bán:</span>
+                                    <strong>150</strong> <!-- Hiển thị số lượng đã bán -->
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <div class="product new_product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <span>Đã bán:</span>
+                                    <strong>150</strong> <!-- Hiển thị số lượng đã bán -->
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <div class="product new_product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <span>Đã bán:</span>
+                                    <strong>150</strong> <!-- Hiển thị số lượng đã bán -->
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <div class="product new_product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <span>Đã bán:</span>
+                                    <strong>150</strong> <!-- Hiển thị số lượng đã bán -->
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <div class="product new_product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <span>Đã bán:</span>
+                                    <strong>150</strong> <!-- Hiển thị số lượng đã bán -->
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <div class="product new_product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <span>Đã bán:</span>
+                                    <strong>150</strong> <!-- Hiển thị số lượng đã bán -->
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <div class="product new_product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <span>Đã bán:</span>
+                                    <strong>150</strong> <!-- Hiển thị số lượng đã bán -->
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <div class="product new_product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <span>Đã bán:</span>
+                                    <strong>150</strong> <!-- Hiển thị số lượng đã bán -->
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <div class="product new_product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <span>Đã bán:</span>
+                                    <strong>150</strong> <!-- Hiển thị số lượng đã bán -->
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-3 c-6">
+                        <div class="product new_product">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product">
+                                </div>
+                            </a>
+                            <div class="product-info">
+                                <div class="product-name">Tên sản phẩm dài hiển thị tối đa 2 dòng</div>
+                                <div class="price">
+                                    <span class="sale-price">200,000 VND</span>
+                                    <span class="discount">-20%</span>
+                                </div>
+                                <div class="original-price">Giá gốc: 250,000 VND</div>
+
+                                <!-- Thanh đã bán -->
+                                <div class="sold">
+                                    <span>Đã bán:</span>
+                                    <strong>150</strong> <!-- Hiển thị số lượng đã bán -->
+                                </div>
+                                <div class="icons">
+                                    <div class="icon-details">
+                                        <i class="fa fa-search" aria-hidden="true"></i> <!-- Icon chi tiết -->
+                                    </div>
+                                    <div class="icon-cart">
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                        <!-- Icon thêm vào giỏ hàng -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- bài viết  -->
+            <section class="grid wide">
+                <div class="row box_post">
+                    <!-- Post 1 -->
+                    <div class="col l-12 m-12 c-12 title_box">
+                        <h3>Bài viết</h3>
+                    </div>
+                    <div class="col l-4 m-4 c-6 post-item">
+                        <div class="post">
+                            <div class="post-image">
+                                <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Post 1">
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">Tiêu đề bài viếdsadasdsadsadsadsadsadsadasdsadasdsat 1</h3>
+                                <p class="post-description">Mô tả ngắn về bài at 1...</p>
+                                <a href="#" class="read-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-6 post-item">
+                        <div class="post">
+                            <div class="post-image">
+                                <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Post 1">
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">Tiêu đề bài viết 1</h3>
+                                <p class="post-description">Mô tả ngắn về bài viết 1...</p>
+                                <a href="#" class="read-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-6 post-item">
+                        <div class="post">
+                            <div class="post-image">
+                                <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Post 1">
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">Tiêu đề bài viết 1</h3>
+                                <p class="post-description">Mô tả ngắn về bài viết 1.</p>
+                                <a href="#" class="read-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-6 post-item">
+                        <div class="post">
+                            <div class="post-image">
+                                <img src="img/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Post 1">
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">Tiêu đề bài viết 1</h3>
+                                <p class="post-description">Mô tả ngắn về bài viết 1...</p>
+                                <a href="#" class="read-more">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- bài viết  -->
+
+        </main>
+    </div>
+
+</body>
+<script src="/js/index.js"></script>
+
+</html>

@@ -10,13 +10,9 @@ return [
         'controller' => 'HomeController',
         'method' => 'index'
     ],
-    'about' => [
-        'controller' => 'PageController',
-        'method' => 'about'
-    ],
-    'contact' => [
-        'controller' => 'PageController',
-        'method' => 'contact'
+    'san-pham' => [
+        'controller' => 'ProductController',
+        'method' => 'viewProduct'
     ],
     'login' => [
         'controller' => 'UserController',

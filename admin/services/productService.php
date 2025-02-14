@@ -13,8 +13,13 @@
         }
 
         public function getOneProduct($id){
-            return $this->productModel->getOneProduct($id);
-            
+            $data = $this->productModel->getOneProduct($id);
+            return $data;
+        }
+
+        public function updateProduct($data){
+            // print_r($data);
+            return $this->productModel->update($data);
         }
     }
 ?>

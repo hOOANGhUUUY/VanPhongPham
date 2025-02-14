@@ -21,3 +21,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+// đổi ảnh đại diện
+ window.onload = function() {
+        let inputFile = document.getElementById('productImage');
+        let previewImg = document.getElementById('preview');
+
+        if (inputFile) {
+            inputFile.addEventListener('change', function(event) {
+                let file = event.target.files[0];
+                if (file) {
+                    let reader = new FileReader();
+                    reader.onload = function(e) {
+                        previewImg.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+    };
+

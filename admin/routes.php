@@ -18,6 +18,10 @@ return [
         'controller' => 'ProductController',
         'method' => 'viewEditProduct'
     ],
+    'cap-nhat-san-pham/:id' => [
+        'controller' => 'ProductController',
+        'method' => 'dataFromEdit'
+    ],
     'login' => [
         'controller' => 'UserController',
         'method' => 'login'

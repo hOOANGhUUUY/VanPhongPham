@@ -101,4 +101,8 @@ class CategoryService
         // ]
         
     }
+
+    public function updateCateProduct($dataCate){
+        return $this->categoryModel->updateCateProduct($dataCate);
+    }
 }

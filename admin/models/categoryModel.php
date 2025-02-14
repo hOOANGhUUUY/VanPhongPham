@@ -54,5 +54,11 @@
             $result = $this->getAll($sql);
             return $result;
         }
+
+        public function updateCateProduct($data){
+            $sql = "UPDATE specific_products SET id_specific = ?, id_product = ?";
+            $param = [$data['category'],$data['id']];
+            return $this->execute($sql, $param);
+        }
     }
 ?>

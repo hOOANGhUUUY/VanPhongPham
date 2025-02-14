@@ -27,46 +27,16 @@ class ProductModel extends Connect
         $this->sold_count = $data['sold_count'] ?? null;
     }
 
-    public function getId()
-    {
-        return $this->id;
-    }
-    public function getName()
-    {
-        return $this->name;
-    }
-    public function getImage()
-    {
-        return $this->image;
-    }
-    public function getDescription()
-    {
-        return $this->description;
-    }
-    public function getPrice()
-    {
-        return $this->price;
-    }
-    public function getPriceSale()
-    {
-        return $this->price_sale;
-    }
-    public function getProductType()
-    {
-        return $this->product_type;
-    }
-    public function getSlug()
-    {
-        return $this->slug;
-    }
-    public function getStatus()
-    {
-        return $this->status;
-    }
-    public function getSoldCount()
-    {
-        return $this->sold_count;
-    }
+    public function getId(){return $this->id;}
+    public function getName(){return $this->name;}
+    public function getImage(){return $this->image;}
+    public function getDescription(){return $this->description;}
+    public function getPrice(){return $this->price;}
+    public function getPriceSale(){return $this->price_sale;}
+    public function getProductType(){return $this->product_type;}
+    public function getSlug(){return $this->slug;}
+    public function getStatus(){return $this->status;}
+    public function getSoldCount(){return $this->sold_count;}
 
 
     public function setId($id)

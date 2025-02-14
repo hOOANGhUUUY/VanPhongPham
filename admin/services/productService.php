@@ -8,9 +8,13 @@
         }
 
         public function getAllProduct(){
+            
             return $this->productModel->getAllProduct();
         }
 
-
+        public function getOneProduct($id){
+            return $this->productModel->getOneProduct($id);
+            
+        }
     }
 ?>

@@ -50,16 +50,19 @@
                             // extract($product);
                         ?>
                         <tr>
-                            <td><?=$product['name']?></td>
-                            <td><img style="width:70px;" src="../public/images/<?=$product['image']?>" alt=""></td>
-                            <td><?=$product['price']?></td>
-                            <td><?=$product['price_sale']?></td>
-                            <td><?=$product['sold_count']?></td>
-                            <td><?=$product['created_at']?></td>
+                            <td><?=$product->getName()?></td>
+                            <td><img style="width:70px;" src="../public/images/<?=$product->getImage()?>" alt=""></td>
+                            <td><?=$product->getPrice()?></td>
+                            <td><?=$product->getPriceSale()?></td>
+                            <td><?=$product->getSoldCount()?></td>
+                            <td><?=$product->getCreatedAt()?></td>
 
 
-                            <td><?=$product['status']?></td>
-                            <td>xóa | sửa</td>
+                            <td><?=$product->getStatus()?></td>
+                            <td>
+                                <a href="san-pham/sua-san-pham/<?=$product->getId()?>">Sửa</a> |
+                                <a href="">Xóa</a>
+                            </td>
                         </tr>
                         <?php
                         }

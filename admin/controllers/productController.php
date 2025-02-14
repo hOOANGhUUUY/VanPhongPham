@@ -12,5 +12,9 @@
                 'dataProduct' => $dataProduct
             ]);
         }
+        public function viewEditProduct(){
+            
+            $this->productView->viewEdit();
+        }
     }
 ?>

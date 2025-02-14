@@ -14,6 +14,10 @@ return [
         'controller' => 'ProductController',
         'method' => 'viewProduct'
     ],
+    'san-pham/sua-san-pham/:id' => [
+        'controller' => 'ProductController',
+        'method' => 'viewEditProduct'
+    ],
     'login' => [
         'controller' => 'UserController',
         'method' => 'login'

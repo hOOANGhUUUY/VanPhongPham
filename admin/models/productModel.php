@@ -10,7 +10,7 @@
         private $slug;
         private $status;
         private $sold_count;
-
+        private $created_at;
         public function __construct($data = []){
             parent::__construct();
             $this->id = $data['id'] ?? null;
@@ -23,6 +23,7 @@
             $this->slug = $data['slug']?? null;
             $this->status = $data['status']?? null;
             $this->sold_count = $data['sold_count']?? null;
+            $this->created_at = $data['created_at']?? null;
         }
 
         public function getId(){return $this->id;}
@@ -35,6 +36,7 @@
         public function getSlug(){return $this->slug;}
         public function getStatus(){return $this->status;}
         public function getSoldCount(){return $this->sold_count;}
+        public function getCreatedAt(){return $this->created_at;}
 
 
         public function setId($id){$this->id = $id;}
@@ -47,12 +49,17 @@
         public function setSlug($slug){$this->slug = $slug;}
         public function setStatus($status){$this->status = $status;}
         public function setSoldCount($sold_count){$this->sold_count = $sold_count;}
+        public function setCreatedAt($created_at){$this->created_at = $created_at;}
 
 
         public function getAllProduct(){
             $sql = "SELECT * FROM products ORDER BY created_at DESC";
-            return $this->getAll($sql);
-
+            $data = $this->getAll($sql);
+            $products = [];
+            foreach($data as $row){
+                $products[] = new ProductModel($row);
+            }
+            return $products;
         }   
 
     }

@@ -710,27 +710,28 @@
             <?php
             // print_r($data['dataNewProduct']);
             foreach ($data['dataNewProduct'] as $product) {
-                extract($product);
-                if ($price_sale !== null) { ?>
+                // extract($product);
+                
+                if ($product->getPriceSale() !== null) { ?>
                     <div class="col l-2-4 m-3 c-6">
                         <div class="product new_product">
                             <a href="#">
                                 <div class="img">
-                                    <img src="public/images/<?= $image ?>" alt="<?= $name ?>">
+                                    <img src="public/images/<?= $product->getImage() ?>" alt="<?= $product->getName() ?>">
                                 </div>
                             </a>
                             <div class="product-info">
-                                <div class="product-name"><?= $name ?></div>
+                                <div class="product-name"><?= $product->getName() ?></div>
                                 <div class="price">
-                                    <span class="sale-price"><?= $price_sale ?> VND</span>
+                                    <span class="sale-price"><?= $product->getPriceSale() ?> VND</span>
                                     <span class="discount">-20%</span>
                                 </div>
-                                <div class="original-price">Giá gốc: <?= $price ?> VND</div>
+                                <div class="original-price">Giá gốc: <?= $product->getPrice() ?> VND</div>
 
                                 <!-- Thanh đã bán -->
                                 <div class="sold">
                                     <span>Đã bán:</span>
-                                    <strong><?= $sold_count ?></strong> <!-- Hiển thị số lượng đã bán -->
+                                    <strong><?= $product->getSoldCount() ?></strong> <!-- Hiển thị số lượng đã bán -->
                                 </div>
                                 <div class="icons">
                                     <div class="icon-details">
@@ -750,13 +751,13 @@
                         <div class="product new_product">
                             <a href="#">
                                 <div class="img">
-                                    <img src="public/images/<?= $image ?>" alt="<?= $name ?>">
+                                    <img src="public/images/<?= $product->getImage() ?>" alt="<?= $product->getName() ?>">
                                 </div>
                             </a>
                             <div class="product-info">
-                                <div class="product-name"><?= $name ?></div>
+                                <div class="product-name"><?= $product->getName() ?></div>
                                 <div class="price">
-                                    <span class="sale-price"><?= $price ?> VND</span>
+                                    <span class="sale-price"><?= $product->getPrice() ?> VND</span>
                                     <span class="discount">-20%</span>
                                 </div>
                                 <div class="original-price" style="height: 16px;"></div>
@@ -764,7 +765,7 @@
                                 <!-- Thanh đã bán -->
                                 <div class="sold">
                                     <span>Đã bán:</span>
-                                    <strong><?= $sold_count ?></strong> <!-- Hiển thị số lượng đã bán -->
+                                    <strong><?= $product->getSoldCount() ?></strong> <!-- Hiển thị số lượng đã bán -->
                                 </div>
                                 <div class="icons">
                                     <div class="icon-details">

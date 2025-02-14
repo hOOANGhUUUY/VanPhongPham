@@ -19,15 +19,12 @@ class HomeController {
         $dataProductSoldCount = $this->productServices->getProductSoldCount();
         $dataNewProduct = $this->productServices->getNewProduct();
 
-        // print_r($dataProductSoldCount);
         $this->homeView->index([
             'dataCate' => $dataCate,
-            'dataBanner' => $dataBanner, 
+            'dataBanner' => $dataBanner,
             'dataProductSoldCount' => $dataProductSoldCount,
             'dataNewProduct' => $dataNewProduct
         ]);
-
-        
     }
     public function getData() {
         $dataCate = $this->categoryServices->grCate();

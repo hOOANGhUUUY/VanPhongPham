@@ -2,6 +2,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Sản phẩm</h1>
+    <a href="san-pham/them-moi" class="btn btn-primary mb-3">Thêm mới</a>
     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
         For more information about DataTables, please visit the <a target="_blank"
             href="https://datatables.net">official DataTables documentation</a>.</p>
@@ -25,7 +26,7 @@
                             <th>Ngày tạo</th>
                             <th>Trang thái</th>
                             <th>Hành động</th>
-                            >
+                            
 
                         </tr>
                     </thead>
@@ -61,7 +62,7 @@
                             <td><?=$product->getStatus()?></td>
                             <td>
                                 <a href="san-pham/sua-san-pham/<?=$product->getId()?>">Sửa</a> |
-                                <a href="">Xóa</a>
+                                <a href="san-pham/xoa-san-pham/<?=$product->getId()?>">Xóa</a>
                             </td>
                         </tr>
                         <?php

@@ -45,6 +45,6 @@ class UserController
 
         session_destroy();
         header("Location: /VanPhongPham-main/");
-        exit();
+        
     }
 }

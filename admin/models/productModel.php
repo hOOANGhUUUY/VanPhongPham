@@ -43,51 +43,150 @@ class ProductModel extends Connect
         $this->overall_name = $data['overall_name'] ?? null;
         $this->category_id = $data['category_id'] ?? null;
         $this->category_name = $data['category_name'] ?? null;
-
-
-
     }
 
-    public function getId(){return $this->id;}
-    public function getName(){return $this->name;}
-    public function getImage(){return $this->image;}
-    public function getDescription(){return $this->description;}
-    public function getPrice(){return $this->price;}
-    public function getPriceSale(){return $this->price_sale;}
-    public function getProductType(){return $this->product_type;}
-    public function getSlug(){return $this->slug;}
-    public function getStatus(){return $this->status;}
-    public function getSoldCount(){return $this->sold_count;}
-    public function getCreatedAt(){return $this->created_at;}
-    
-    public function setId($id){$this->id = $id;}
-    public function setName($name){$this->name = $name;}
-    public function setImage($image){$this->image = $image;}
-    public function setDescription($description){ $this->description = $description;}
-    public function setPrice($price){$this->price = $price;}
-    public function setPriceSale($price_sale){$this->price_sale = $price_sale;}
-    public function setProductType($product_type){$this->product_type = $product_type;}
-    public function setSlug($slug){$this->slug = $slug;}
-    public function setStatus($status){$this->status = $status;}
-    public function setSoldCount($sold_count){$this->sold_count = $sold_count;}
-    public function setCreatedAt($created_at){$this->created_at = $created_at;}
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function getImage()
+    {
+        return $this->image;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function getPrice()
+    {
+        return $this->price;
+    }
+    public function getPriceSale()
+    {
+        return $this->price_sale;
+    }
+    public function getProductType()
+    {
+        return $this->product_type;
+    }
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+    public function getStatus()
+    {
+        return $this->status;
+    }
+    public function getSoldCount()
+    {
+        return $this->sold_count;
+    }
+    public function getCreatedAt()
+    {
+        return $this->created_at;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+    public function setPriceSale($price_sale)
+    {
+        $this->price_sale = $price_sale;
+    }
+    public function setProductType($product_type)
+    {
+        $this->product_type = $product_type;
+    }
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+    public function setSoldCount($sold_count)
+    {
+        $this->sold_count = $sold_count;
+    }
+    public function setCreatedAt($created_at)
+    {
+        $this->created_at = $created_at;
+    }
 
 
     // get danh mục
-    public function getSpecificId(){return $this->specific_id;}
-    public function getSpecificName(){return $this->specific_name;}
-    public function getOverallId(){return $this->overall_id;}
-    public function getOverallName(){return $this->overall_name;}
-    public function getCategoryId(){return $this->category_id;}
-    public function getCategoryName(){return $this->category_name;}
+    public function getSpecificId()
+    {
+        return $this->specific_id;
+    }
+    public function getSpecificName()
+    {
+        return $this->specific_name;
+    }
+    public function getOverallId()
+    {
+        return $this->overall_id;
+    }
+    public function getOverallName()
+    {
+        return $this->overall_name;
+    }
+    public function getCategoryId()
+    {
+        return $this->category_id;
+    }
+    public function getCategoryName()
+    {
+        return $this->category_name;
+    }
 
     // set danh mục
-    public function setSpecificId($specific_id){$this->specific_id = $specific_id;}
-    public function setSpecificName($specific_name){$this->specific_name = $specific_name;}
-    public function setOverallId($overall_id){$this->overall_id = $overall_id;}
-    public function setOverallName($overall_name){$this->overall_name = $overall_name;}
-    public function setCategoryId($category_id){$this->category_id = $category_id;}
-    public function setCategoryName($category_name){$this->category_name = $category_name;}
+    public function setSpecificId($specific_id)
+    {
+        $this->specific_id = $specific_id;
+    }
+    public function setSpecificName($specific_name)
+    {
+        $this->specific_name = $specific_name;
+    }
+    public function setOverallId($overall_id)
+    {
+        $this->overall_id = $overall_id;
+    }
+    public function setOverallName($overall_name)
+    {
+        $this->overall_name = $overall_name;
+    }
+    public function setCategoryId($category_id)
+    {
+        $this->category_id = $category_id;
+    }
+    public function setCategoryName($category_name)
+    {
+        $this->category_name = $category_name;
+    }
 
 
 
@@ -95,7 +194,8 @@ class ProductModel extends Connect
 
 
 
-    public function getAllProduct(){
+    public function getAllProduct()
+    {
         $sql = "SELECT * FROM products ORDER BY created_at DESC";
         $data = $this->getAll($sql);
         $products = [];
@@ -106,7 +206,7 @@ class ProductModel extends Connect
     }
 
     public function getOneProduct($id)
-{
+    {
         $sql = "SELECT 
                     p.id AS product_id, 
                     p.name AS product_name,
@@ -133,20 +233,37 @@ class ProductModel extends Connect
                     LEFT JOIN categorys c ON cof.id_cate = c.id
                     WHERE p.id = ?;
                 ";
-            $param = [$id];
-             return $this->getOne($sql,$param);
+        $param = [$id];
+        return $this->getOne($sql, $param);
 
-            // $products = [];
-            // foreach($data as $row){
-            //     $products[] = new ProductModel($row);
-            // }
-            // return $products;
+        // $products = [];
+        // foreach($data as $row){
+        //     $products[] = new ProductModel($row);
+        // }
+        // return $products;
     }
 
-    public function update($data){
+    public function update($data)
+    {
         // var_dump($data);
         $sql = "UPDATE products SET name = ?, image = ?, description=?, price=?, price_sale=?, status=? WHERE id = ?";
-        $param = [$data['name'],$data['image'],$data['description'],$data['price'],$data['price_sale'],$data['status'],$data['id'],];
-        return $this->execute($sql,$param);
+        $param = [$data['name'], $data['image'], $data['description'], $data['price'], $data['price_sale'], $data['status'], $data['id'],];
+        return $this->execute($sql, $param);
+    }
+
+    public function delete($id){
+        $sql = "DELETE FROM products WHERE id = ?";
+        $param = [$id];
+        return $this->execute($sql, $param);
+    }
+    public function addProduct($data){
+        
+        $sql = "INSERT INTO `products` (`name`, `image`, `description`, `price`, `price_sale`, `slug`, `status`) VALUES
+        (?,?,?,?,?,?,?);
+        
+        ";
+        $param = [$data['name'],$data['image'],$data['description'],$data['price'],$data['price_sale'], $data['slug'],$data['status']];
+        $this->execute($sql,$param);
+        return $this->lastInsertId();
     }
 }

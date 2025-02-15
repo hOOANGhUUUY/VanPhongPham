@@ -10,5 +10,10 @@
             $base_url = '../../';
             require_once './views/layout/template.php';
         }
+        public function viewAdd($data= []){
+            $fileView = './views/products/add_product.php';
+            $base_url = '../';
+            require_once './views/layout/template.php';
+        }
     }
 ?>

@@ -18,9 +18,21 @@ return [
         'controller' => 'ProductController',
         'method' => 'viewEditProduct'
     ],
+    'san-pham/xoa-san-pham/:id' => [
+        'controller' => 'ProductController',
+        'method' => 'delete'
+    ],
+    'san-pham/them-moi' => [
+        'controller' => 'ProductController',
+        'method' => 'viewAdd'
+    ],
     'cap-nhat-san-pham/:id' => [
         'controller' => 'ProductController',
         'method' => 'dataFromEdit'
+    ],
+    'san-pham/them-moi/gui' => [
+        'controller' => 'ProductController',
+        'method' => 'dataFormAdd'
     ],
     'login' => [
         'controller' => 'UserController',

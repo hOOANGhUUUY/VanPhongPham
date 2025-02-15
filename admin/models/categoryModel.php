@@ -60,5 +60,11 @@
             $param = [$data['category'],$data['id']];
             return $this->execute($sql, $param);
         }
+
+        public function addCate($data){
+            $sql = "INSERT INTO specific_products (id_specific, id_product) VALUE (?,?)";
+            $param = [$data['category'],$data['idNewProduct']];
+            return $this->execute($sql, $param);
+        }
     }
 ?>

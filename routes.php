@@ -22,6 +22,10 @@ return [
         'controller' => 'UserController',
         'method' => 'logout'
     ],
+    'dang-ky' => [
+        'controller' => 'UserController',
+        'method' => 'register'
+    ],
     'admin' => [
         'controller' => 'AdminController',
         'method' => 'index',

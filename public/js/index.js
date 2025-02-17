@@ -288,12 +288,12 @@ registerTogglePasswordIconRepeat.addEventListener('click', () => {
 });
 
 // Xử lý gửi form
-const registerForm = document.getElementById('register-form');
-registerForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert('Đăng ký thành công!');
-  registerOverlay.classList.add('hidden');
-});
+// const registerForm = document.getElementById('register-form');
+// registerForm.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   alert('Đăng ký thành công!');
+//   registerOverlay.classList.add('hidden');
+// });
 
 
 

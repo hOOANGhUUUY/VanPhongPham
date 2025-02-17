@@ -91,5 +91,31 @@ class UserModel extends Connect{
         $sql = "SELECT * FROM users WHERE email = ?";
         return $this->getOne($sql, [$email]);
     }
+
+    public function addUSer($data) {
+        $check = "SELECT id FROM users WHERE email = ?";
+        $paramCheck =[$data['email']];
+        if($this->getOne($check,$paramCheck)){
+            echo '<script>
+            alert("Email đã tồn tại");
+            window.location.href = "/VanPhongPham-main/";
+            </script>';
+        }else{
+            $sql = "INSERT INTO users (name, phone, email, password) VALUE
+            (?,?,?,?);
+            ";
+            $param = [$data['name'],$data['phone'],$data['email'],$data['password']];
+            $kq = $this->execute($sql, $param);
+            
+     
+            if ($kq) {
+                return true; // Thêm dòng này
+            } else {
+                return false; // Thêm dòng này
+            }
+        }
+
+    }
+    
 }
 ?>  

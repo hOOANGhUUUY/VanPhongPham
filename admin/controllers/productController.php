@@ -21,8 +21,9 @@ class ProductController
     public function viewEditProduct($id)
     {
         $dataCateOfProduct = $this->productService->getOneProduct($id);
-
+        
         $dataCate = $this->categoryService->grCate();
+        // print_r($dataCate);
         $this->productView->viewEdit([
             'dataCate' => $dataCate,
             'dataCateAndProduct' => $dataCateOfProduct
@@ -52,6 +53,9 @@ class ProductController
                 $file_old = '../public/images/' . $productImageOld;
                 unlink($file_old);
             }
+            if(empty($salePrice)){
+                $salePrice = null;
+            }
             $data = [
                 'id' => $productId,
                 'name' => $productName,
@@ -68,10 +72,11 @@ class ProductController
             $this->productService->updateProduct($data);
             $this->categoryService->updateCateProduct($data);
   
-            header('Location: /VanPhongPham-main/admin/san-pham');
+          
             
             echo '<script>
             alert("Sửa sản phẩm thành công");
+            window.location.href = "/VanPhongPham-main/admin/san-pham";
             </script>';
         }
     }
@@ -84,8 +89,7 @@ class ProductController
             echo "<script>
                     alert(Xóa thành công');
                 </script>";
-                header('Location: /VanPhongPham-main/admin/san-pham');
-                exit();
+
     }
 
     public function viewAdd()
@@ -124,8 +128,7 @@ class ProductController
             $fileSaveImage = '../public/images/' . $productImage;
             if (move_uploaded_file($_FILES['productImage']['tmp_name'], $fileSaveImage)) {
                 $this->productService->addProduct($data);
-                header('Location: /VanPhongPham-main/admin/san-pham');
-                exit();
+
                 echo '<script>
                     alert("Thêm bài viết thành công");
                     

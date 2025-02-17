@@ -16,9 +16,18 @@ class UserService{
                 'user' => new UserModel($user),
                 'role' => $user['id_user_roles']
             ];
+        }else{
+            echo '<script>
+            alert("Sai mật khẩu");
+            window.location.href = "/VanPhongPham-main/";
+            </script>';
+
         }
 
         return ['status' => 'Đăng nhập thất bại'];
+    }
+    public function addUser($data){
+        return $this->userModel->addUSer($data);
     }
 
 }

@@ -207,29 +207,29 @@
                         <!-- Hộp đăng ký -->
                         <div class="register-box">
                             <h2>Đăng Ký</h2>
-                            <form id="register-form">
+                            <form id="register-form" action="dang-ky" method="POST">
                                 <!-- Nhập họ tên -->
                                 <div class="register-input-group">
                                     <label for="register-name">Họ và Tên</label>
                                     <input type="text" id="register-name" class="register-input"
-                                        placeholder="Nhập họ và tên" required>
+                                        placeholder="Nhập họ và tên" required name="register-name">
                                 </div>
                                 <!-- Nhập email -->
                                 <div class="register-input-group">
                                     <label for="register-email">Email</label>
-                                    <input type="email" id="register-email" class="register-input"
+                                    <input type="email" id="register-email" name="register-email" class="register-input"
                                         placeholder="Nhập email" required>
                                 </div>
                                 <!-- Nhập số điện thoại -->
                                 <div class="register-input-group">
                                     <label for="register-phone">Số điện thoại</label>
-                                    <input type="text" id="register-phone" class="register-input"
+                                    <input type="text" id="register-phone" name="register-phone" class="register-input"
                                         placeholder="Nhập số điện thoại" required>
                                 </div>
                                 <!-- Nhập mật khẩu -->
                                 <div class="register-input-group password-container">
                                     <label for="register-password">Mật khẩu</label>
-                                    <input type="password" id="register-password" class="register-input"
+                                    <input type="password" id="register-password" name="register-password" class="register-input"
                                         placeholder="Nhập mật khẩu" required>
                                     <i class="fa-solid fa-eye register-toggle-password"
                                         id="register-toggle-password"></i>
@@ -237,8 +237,8 @@
                                 <!-- Nhập lại mật khẩu -->
                                 <div class="register-input-group password-container">
                                     <label for="register-password-repeat">Nhập lại mật khẩu</label>
-                                    <input type="password" id="register-password-repeat" class="register-input"
-                                        placeholder="Nhập lại mật khẩu" required>
+                                    <input type="password" id="register-password-repeat" name="register-password-repeat" class="register-input"
+                                        placeholder="Nhập lại mật khẩu"  required>
                                     <i class="fa-solid fa-eye register-toggle-password"
                                         id="register-toggle-password-repeat"></i>
                                 </div>

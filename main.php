@@ -1,9 +1,9 @@
 <?php
 require_once 'include.php';
 
-// require_once 'controllers/HomeController.php';
 // Tự động tải file route
 $routes = require __DIR__ . '/routes.php';
+
 // Lấy URI từ yêu cầu
 $requestUri = str_replace('/VanPhongPham-main/', '', $_SERVER['REQUEST_URI']);
 $uri = trim($requestUri, '/');
@@ -11,33 +11,49 @@ $uri = trim($requestUri, '/');
 // Tìm route phù hợp
 $routeFound = false;
 
-?>
-
-<?php
-        foreach ($routes as $route => $action) {
+foreach ($routes as $route => $action) {
+    $routePattern = preg_replace('/:\w+/', '(\w+)', $route);
     
-    // Xử lý tham số động (:id)
-    $routePattern = preg_replace('/:\w+/', '(\w+)', $route); // Chuyển :id thành regex
+    // Kiểm tra nếu có match và khởi tạo $matches
     if (preg_match("#^$routePattern$#", $uri, $matches)) {
         $routeFound = true;
-        // Xử lý tham số động trong URL
-        array_shift($matches); // Bỏ phần tử đầu tiên (match toàn bộ URL)
-        // array_shift($matches); 
-        $controllerName = $action['controller'];
-        $methodName = $action['method'];
-        // xử lý admin
-        if (isset($action['middleware'])) {
-            if ($action['middleware'] === 'admin') {
-                AuthMiddleware::checkAdmin(); // Chặn user không phải admin
+
+        // Kiểm tra và gọi các middleware
+        if (isset($action['middlewares'])) {
+            $middlewares = $action['middlewares'];
+            foreach ($middlewares as $middleware) {
+                $middlewareClass = $middleware['class'];
+                $method = $middleware['method'];
+
+                if (class_exists($middlewareClass) && method_exists($middlewareClass, $method)) {
+                    // Gọi middleware
+                    $middlewareClass::$method($_REQUEST, function($request) use ($action, $matches) {
+                        // Nếu tất cả middleware xử lý xong, gọi controller
+                        $controllerName = $action['controller'];
+                        $methodName = $action['method'];
+
+                        if (class_exists($controllerName) && method_exists($controllerName, $methodName)) {
+                            $controller = new $controllerName();
+                            call_user_func_array([$controller, $methodName], $matches);
+                        } else {
+                            http_response_code(500);
+                            echo "Controller hoặc phương thức không tồn tại.";
+                        }
+                    });
+                }
             }
-        }
-        // Gọi controller và phương thức
-        if (class_exists($controllerName) && method_exists($controllerName, $methodName)) {
-            $controller = new $controllerName();
-            call_user_func_array([$controller, $methodName], $matches);
         } else {
-            http_response_code(500);
-            echo "Controller hoặc phương thức không tồn tại.";
+            // Nếu không có middleware, trực tiếp gọi controller
+            $controllerName = $action['controller'];
+            $methodName = $action['method'];
+
+            if (class_exists($controllerName) && method_exists($controllerName, $methodName)) {
+                $controller = new $controllerName();
+                call_user_func_array([$controller, $methodName], $matches);
+            } else {
+                http_response_code(500);
+                echo "Controller hoặc phương thức không tồn tại.";
+            }
         }
         break;
     }
@@ -48,4 +64,5 @@ if (!$routeFound) {
     http_response_code(404);
     echo "404 - Không tìm thấy trang.";
 }
+
 ?>

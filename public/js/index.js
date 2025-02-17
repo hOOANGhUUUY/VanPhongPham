@@ -160,42 +160,42 @@ function updateSlider() {
 //     }
 // });
 document.addEventListener("DOMContentLoaded", function () {
-  const menuItems = document.querySelectorAll('.menu-item');
-  const detailCategories = document.querySelectorAll('.detail-category');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const detailCategories = document.querySelectorAll('.detail-category');
 
-  // Đảm bảo danh mục cha đầu tiên được hiển thị khi vào trang
-  if (menuItems.length > 0) {
-      // Kích hoạt danh mục cha đầu tiên
-      menuItems[0].classList.add('active'); 
+    // Đảm bảo danh mục cha đầu tiên được hiển thị khi vào trang
+    if (menuItems.length > 0) {
+        // Kích hoạt danh mục cha đầu tiên
+        menuItems[0].classList.add('active');
 
-      // Hiển thị danh mục con đầu tiên
-      const firstTargetId = menuItems[0].getAttribute('data-target');
-      const firstTargetCategory = document.getElementById(firstTargetId);
-      if (firstTargetCategory) {
-          firstTargetCategory.classList.add('active');
-      }
-  }
+        // Hiển thị danh mục con đầu tiên
+        const firstTargetId = menuItems[0].getAttribute('data-target');
+        const firstTargetCategory = document.getElementById(firstTargetId);
+        if (firstTargetCategory) {
+            firstTargetCategory.classList.add('active');
+        }
+    }
 
-  // Lắng nghe sự kiện hover cho các danh mục cha
-  menuItems.forEach(menuItem => {
-      menuItem.addEventListener('mouseenter', function () {
-          // Xóa class active của tất cả danh mục con
-          detailCategories.forEach(category => category.classList.remove('active'));
+    // Lắng nghe sự kiện hover cho các danh mục cha
+    menuItems.forEach(menuItem => {
+        menuItem.addEventListener('mouseenter', function () {
+            // Xóa class active của tất cả danh mục con
+            detailCategories.forEach(category => category.classList.remove('active'));
 
-          // Lấy id danh mục con tương ứng
-          const targetId = menuItem.getAttribute('data-target');
-          const targetCategory = document.getElementById(targetId);
+            // Lấy id danh mục con tương ứng
+            const targetId = menuItem.getAttribute('data-target');
+            const targetCategory = document.getElementById(targetId);
 
-          if (targetCategory) {
-              targetCategory.classList.add('active');
-          }
+            if (targetCategory) {
+                targetCategory.classList.add('active');
+            }
 
-          // Xóa class active của tất cả các danh mục cha khác
-          menuItems.forEach(item => item.classList.remove('active'));
-          // Chỉ thêm class active vào danh mục cha hiện tại
-          menuItem.classList.add('active');
-      });
-  });
+            // Xóa class active của tất cả các danh mục cha khác
+            menuItems.forEach(item => item.classList.remove('active'));
+            // Chỉ thêm class active vào danh mục cha hiện tại
+            menuItem.classList.add('active');
+        });
+    });
 });
 
 
@@ -205,8 +205,21 @@ const register = document.querySelector('.home_account .sub-account ul .register
 const boxLogin = document.getElementById('login-overlay');
 const boxRegister = document.getElementById('register-overlay');
 
+
+// kiểm tra nếu có lỗi hiển thị box
+const errorSpans = document.querySelectorAll('span[style="color:red;"]');
+
+// Duyệt qua từng thẻ <span> để kiểm tra xem nó có nội dung lỗi hay không
+errorSpans.forEach(span => {
+    if (span.textContent.trim() !== '') {
+        boxLogin.classList.remove('hidden');
+    } else {
+        console.log("Không có lỗi.");
+    }
+});
+
 // Khi nhấn vào đăng nhập
-login.addEventListener('click', function() {
+login.addEventListener('click', function () {
     // Ẩn box đăng ký (nếu đang hiển thị)
     if (!boxLogin.classList.contains('hidden')) {
         boxLogin.classList.add('hidden');
@@ -218,7 +231,7 @@ login.addEventListener('click', function() {
 });
 
 // Khi nhấn vào đăng ký
-register.addEventListener('click', function() {
+register.addEventListener('click', function () {
     // Ẩn box đăng nhập (nếu đang hiển thị)
     if (!boxRegister.classList.contains('hidden')) {
         boxRegister.classList.add('hidden');
@@ -236,17 +249,17 @@ const loginPasswordInput = document.getElementById('login-password');
 
 // Ẩn hộp đăng nhập khi nhấn vào lớp mờ ngoài
 loginOverlay.addEventListener('click', (event) => {
-  if (event.target === loginOverlay) {
-    loginOverlay.classList.add('hidden');
-  }
+    if (event.target === loginOverlay) {
+        loginOverlay.classList.add('hidden');
+    }
 });
 
 // Chuyển đổi hiển thị mật khẩu
 loginTogglePasswordIcon.addEventListener('click', () => {
-  const isPassword = loginPasswordInput.getAttribute('type') === 'password';
-  loginPasswordInput.setAttribute('type', isPassword ? 'text' : 'password');
-  loginTogglePasswordIcon.classList.toggle('fa-eye');
-  loginTogglePasswordIcon.classList.toggle('fa-eye-slash');
+    const isPassword = loginPasswordInput.getAttribute('type') === 'password';
+    loginPasswordInput.setAttribute('type', isPassword ? 'text' : 'password');
+    loginTogglePasswordIcon.classList.toggle('fa-eye');
+    loginTogglePasswordIcon.classList.toggle('fa-eye-slash');
 });
 
 // Xử lý gửi form
@@ -266,25 +279,25 @@ const registerPasswordInputRepeat = document.getElementById('register-password-r
 
 // Ẩn hộp đăng ký khi nhấn vào lớp mờ ngoài
 registerOverlay.addEventListener('click', (event) => {
-  if (event.target === registerOverlay) {
-    registerOverlay.classList.add('hidden');
-  }
+    if (event.target === registerOverlay) {
+        registerOverlay.classList.add('hidden');
+    }
 });
 
 // Chuyển đổi hiển thị mật khẩu cho mật khẩu chính
 registerTogglePasswordIcon.addEventListener('click', () => {
-  const isPassword = registerPasswordInput.getAttribute('type') === 'password';
-  registerPasswordInput.setAttribute('type', isPassword ? 'text' : 'password');
-  registerTogglePasswordIcon.classList.toggle('fa-eye');
-  registerTogglePasswordIcon.classList.toggle('fa-eye-slash');
+    const isPassword = registerPasswordInput.getAttribute('type') === 'password';
+    registerPasswordInput.setAttribute('type', isPassword ? 'text' : 'password');
+    registerTogglePasswordIcon.classList.toggle('fa-eye');
+    registerTogglePasswordIcon.classList.toggle('fa-eye-slash');
 });
 
 // Chuyển đổi hiển thị mật khẩu cho mật khẩu nhập lại
 registerTogglePasswordIconRepeat.addEventListener('click', () => {
-  const isPassword = registerPasswordInputRepeat.getAttribute('type') === 'password';
-  registerPasswordInputRepeat.setAttribute('type', isPassword ? 'text' : 'password');
-  registerTogglePasswordIconRepeat.classList.toggle('fa-eye');
-  registerTogglePasswordIconRepeat.classList.toggle('fa-eye-slash');
+    const isPassword = registerPasswordInputRepeat.getAttribute('type') === 'password';
+    registerPasswordInputRepeat.setAttribute('type', isPassword ? 'text' : 'password');
+    registerTogglePasswordIconRepeat.classList.toggle('fa-eye');
+    registerTogglePasswordIconRepeat.classList.toggle('fa-eye-slash');
 });
 
 // Xử lý gửi form

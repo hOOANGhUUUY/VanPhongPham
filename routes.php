@@ -14,10 +14,10 @@ return [
         'controller' => 'PageController',
         'method' => 'contact'
     ],
-    'login' => [
-        'controller' => 'UserController',
-        'method' => 'login'
-    ],
+    // 'login' => [
+    //     'controller' => 'UserController',
+    //     'method' => 'login'
+    // ],
     'logout' => [
         'controller' => 'UserController',
         'method' => 'logout'
@@ -30,10 +30,13 @@ return [
         'controller' => 'UserController',
         'method' => 'customer'
     ],
-    'admin' => [
-        'controller' => 'AdminController',
-        'method' => 'index',
-        'middleware' => 'admin'
+    'login' => [
+        'controller' => 'UserController',
+        'method' => 'login',
+        'middlewares' => [
+            ['class' => 'AuthMiddleware', 'method' => 'login']
+
+        ]
     ],
 
 

@@ -176,6 +176,7 @@
             </div>
         </div>
         <!-- đăng nhập   -->
+
         <div class="grid wide">
             <div class="row">
                 <div class="col l-12 m-12 c-12">
@@ -185,11 +186,14 @@
                             <form id="login-form" action="login" method="POST">
                                 <div class="login-input-group">
                                     <label for="login-email">Email</label>
-                                    <input type="email" name="login-email" id="login-email" class="login-input" required>
+                                    <input type="text" name="login-email" id="login-email" class="login-input" >
+                                    <span style="color:red;"><?php if(isset($data['errorLogin']['email'])) echo $data['errorLogin']['email'] ?></span>
                                 </div>
                                 <div class="login-input-group password-container">
                                     <label for="login-password">Mật khẩu</label>
-                                    <input type="password" name="login-password" id="login-password" class="login-input" required>
+                                    <input type="password" name="login-password" id="login-password" class="login-input" >
+                                    <span style="color:red;"><?php if(isset($data['errorLogin']['password'])) echo $data['errorLogin']['password'] ?></span>
+
                                     <i class="fa-solid fa-eye login-toggle-password" id="login-toggle-password"></i>
                                 </div>
                                 <button type="submit" class="login-btn">Đăng Nhập</button>

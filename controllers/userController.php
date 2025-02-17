@@ -103,4 +103,8 @@ class UserController
             }
         }
     }
+
+    public function customer(){
+        echo 'đây là trang người dùng';
+    }
 }

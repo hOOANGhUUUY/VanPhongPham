@@ -108,60 +108,67 @@ body{
 
 /* giỏ hàng  */
 
-/* tài khoản */
+/* Tài khoản */
 .home_account {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     position: relative; /* Cần thiết để sub-account hiển thị đúng */
-  }
-  
-  .home_account span:first-child {
+    padding: 5px; /* Thêm padding nếu cần */
+}
+
+.home_account span {
     font-size: 24px;
     color: #333;
     margin-bottom: 5px;
-  }
-  
-  .home_account span {
-    white-space: nowrap; /* Ngăn chữ xuống dòng */
-  }
-  
-  .home_account .sub-account {
+    display: block; /* Đảm bảo icon và chữ nằm trên các dòng riêng biệt */
+}
+
+.home_account a {
+    text-decoration: none;   /* Tắt gạch chân */
+    color: inherit;          /* Dùng màu sắc của phần tử cha */
+    background: none;        /* Tắt nền */
+    padding: 0;              /* Loại bỏ padding */
+    margin: 0;               /* Loại bỏ margin */
+    outline: none;           /* Loại bỏ viền khi được focus */
+}
+
+.home_account .sub-account {
     display: none; /* Ẩn mặc định */
     position: absolute; /* Đặt sub-account tuyệt đối trong .home_account */
     top: 100%; /* Hiển thị dưới "Tài khoản" */
-    /* left: 0; */
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 200px; /* Chỉnh chiều rộng sub-account */
     padding: 10px 0;
-  }
-  
-  .home_account:hover .sub-account {
+}
+
+.home_account:hover .sub-account {
     display: block; /* Hiển thị khi hover vào .home_account */
-  }
-  
-  .home_account .sub-account ul {
+}
+
+.home_account .sub-account ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .home_account .sub-account ul li {
+}
+
+.home_account .sub-account ul li {
     padding: 10px;
-  }
-  
-  .home_account .sub-account ul li a {
+}
+
+.home_account .sub-account ul li a {
     text-decoration: none;
     color: #333;
     font-size: 16px;
-  }
-  
-  .home_account .sub-account ul li a:hover {
+}
+
+.home_account .sub-account ul li a:hover {
     background-color: #f2f2f2;
-  }
+}
+
   
 
 

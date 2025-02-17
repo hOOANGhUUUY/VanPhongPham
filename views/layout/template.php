@@ -120,33 +120,40 @@
 
                     <?php
                     if (isset($_SESSION['name_user'])) { ?>
+                        <a href="khach-hang">
+                            <div class="col l-1 m-1 c-2 menu">
+                                <div class="home_account">
+                                    <span><i class="fa-solid fa-user"></i></span>
+                                    <?= $_SESSION['name_user'] ?>
+                                    <!-- Sub-account hiển thị khi hover vào "Tài khoản" -->
+                                    <div class="sub-account">
+                                        <ul>
+                                            <li class="logout"><a href="logout">Đăng Xuất</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    <?php   } else { ?>
+
                         <div class="col l-1 m-1 c-2 menu">
                             <div class="home_account">
                                 <span><i class="fa-solid fa-user"></i></span>
-                                <?= $_SESSION['name_user'] ?>
+                                Tài khoản
                                 <!-- Sub-account hiển thị khi hover vào "Tài khoản" -->
                                 <div class="sub-account">
                                     <ul>
-                                        <li class="logout"><a href="logout">Đăng Xuất</a></li>
+                                        <li class="login"><a href="#login">Đăng Nhập</a></li>
+                                        <li class="register"><a href="#register">Đăng Ký</a></li>
                                     </ul>
                                 </div>
                             </div>
+
+
                         </div>
-                    <?php   } else { ?>
-                        <div class="col l-1 m-1 c-2 menu">
-                        <div class="home_account">
-                            <span><i class="fa-solid fa-user"></i></span>
-                            Tài khoản
-                            <!-- Sub-account hiển thị khi hover vào "Tài khoản" -->
-                            <div class="sub-account">
-                                <ul>
-                                    <li class="login"><a href="#login">Đăng Nhập</a></li>
-                                    <li class="register"><a href="#register">Đăng Ký</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                        <?php
+
+                    <?php
                     }
                     ?>
                     <!-- <div class="col l-1 m-1 c-2 menu">
@@ -238,7 +245,7 @@
                                 <div class="register-input-group password-container">
                                     <label for="register-password-repeat">Nhập lại mật khẩu</label>
                                     <input type="password" id="register-password-repeat" name="register-password-repeat" class="register-input"
-                                        placeholder="Nhập lại mật khẩu"  required>
+                                        placeholder="Nhập lại mật khẩu" required>
                                     <i class="fa-solid fa-eye register-toggle-password"
                                         id="register-toggle-password-repeat"></i>
                                 </div>

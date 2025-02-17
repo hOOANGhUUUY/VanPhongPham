@@ -26,6 +26,10 @@ return [
         'controller' => 'UserController',
         'method' => 'register'
     ],
+    'khach-hang' => [
+        'controller' => 'UserController',
+        'method' => 'customer'
+    ],
     'admin' => [
         'controller' => 'AdminController',
         'method' => 'index',

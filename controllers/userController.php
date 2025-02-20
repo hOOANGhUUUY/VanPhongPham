@@ -18,11 +18,34 @@ class UserController
             if (isset($_SESSION['errors']) && !empty($_SESSION['errors'])) {
                 $homeData = $this->homeController->getData();
                 $homeData['errorLogin'] = $_SESSION['errors'];
-                $this->homeView->index($homeData); 
-                session_destroy($_SESSION['errors']);
-                // unset($_SESSION['errors']);
+                $this->homeView->index($homeData);
+                unset($_SESSION['user']);
+                session_destroy();
             } else {
-                echo "Không có lỗi";  // Nếu không có lỗi
+                $email = $_POST['login-email'];
+                $password = $_POST['login-password'];
+
+                $data = $this->userService->loginUser($email, $password);
+                if (isset($data['user'])) {
+                    $_SESSION['id_user'] = $data['user']->getId();
+                    $_SESSION['name_user'] = $data['user']->getName();
+                    $_SESSION['role'] = $data['user']->getIdUserRoles();
+
+                    // $_SESSION['role'] = $data['role'];
+                    if ($data['user']->isAdmin()) {
+                        header('Location: /VanPhongPham-main' . ($data['user']->isAdmin() ? '/admin/' : ''));
+                        exit();
+                    } else {
+                        $homeData = $this->homeController->getData();
+                        $homeData['user'] = $data['user'];
+                        $this->homeView->index($homeData);
+
+                        echo "<script>alert('Đăng nhập thành công');</script>";
+                    }
+                    exit();
+                } else {
+                    echo "<script>alert('Đăng nhập thất bại! Vui lòng kiểm tra lại.');</script>";
+                }
             }
         }
         // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -92,7 +115,7 @@ class UserController
                     $_SESSION['id_user'] = $data['user']->getId();
                     $_SESSION['name_user'] = $data['user']->getName();
                     $_SESSION['role'] = $data['user']->getIdUserRoles();
-    
+
                     // $_SESSION['role'] = $data['role'];
                     if ($data['user']->isAdmin()) {
                         header('Location: /VanPhongPham-main' . ($data['user']->isAdmin() ? '/admin/' : ''));
@@ -101,7 +124,7 @@ class UserController
                         $homeData = $this->homeController->getData();
                         $homeData['user'] = $data['user'];
                         $this->homeView->index($homeData);
-    
+
                         echo "<script>alert('Đăng ký thành công');</script>";
                     }
                     exit();
@@ -116,7 +139,12 @@ class UserController
         }
     }
 
-    public function customer(){
-        echo 'đây là trang người dùng';
+    public function customer()
+    {
+
+        if(isset($_SESSION['id_user'])){
+            $idCustomer = $_SESSION['id_user'];
+            $this->homeView->userInfo();
+        }
     }
 }

@@ -1,0 +1,114 @@
+
+.box_nav_user {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.baner_uer img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #ddd;
+}
+
+.user_name {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.menu_account {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu_account li {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background: #f5f5f5;
+}
+
+.menu_account a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    display: block;
+}
+
+.menu_account li:hover {
+    background: #ddd;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.submenu li {
+    padding: 5px 0;
+}
+
+.menu_account li.active>.submenu {
+    display: block;
+}
+
+.container_user {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section.active {
+    display: flex;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn_primary {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn_primary:hover {
+    background: #0056b3;
+}

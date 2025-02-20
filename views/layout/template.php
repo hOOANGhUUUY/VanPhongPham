@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="public/css/Grid.css">
     <link rel="stylesheet" href="public/css/index.css">
+    <?php if (isset($cssFile)) : ?>
+        <link rel="stylesheet" href="public/css/<?=$cssFile?>">
+    <?php endif; ?>
+
+
+
     <style>
         * {
             box-sizing: border-box;
@@ -186,13 +192,13 @@
                             <form id="login-form" action="login" method="POST">
                                 <div class="login-input-group">
                                     <label for="login-email">Email</label>
-                                    <input type="text" name="login-email" id="login-email" class="login-input" >
-                                    <span style="color:red;"><?php if(isset($data['errorLogin']['email'])) echo $data['errorLogin']['email'] ?></span>
+                                    <input type="text" name="login-email" id="login-email" class="login-input">
+                                    <span style="color:red;"><?php if (isset($data['errorLogin']['email'])) echo $data['errorLogin']['email'] ?></span>
                                 </div>
                                 <div class="login-input-group password-container">
                                     <label for="login-password">Mật khẩu</label>
-                                    <input type="password" name="login-password" id="login-password" class="login-input" >
-                                    <span style="color:red;"><?php if(isset($data['errorLogin']['password'])) echo $data['errorLogin']['password'] ?></span>
+                                    <input type="password" name="login-password" id="login-password" class="login-input">
+                                    <span style="color:red;"><?php if (isset($data['errorLogin']['password'])) echo $data['errorLogin']['password'] ?></span>
 
                                     <i class="fa-solid fa-eye login-toggle-password" id="login-toggle-password"></i>
                                 </div>

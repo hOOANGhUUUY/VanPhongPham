@@ -129,11 +129,15 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="san-pham">
+                <a class="nav-link" href="/VanPhongPham-main/admin/san-pham">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Sản phẩm</span></a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" href="/VanPhongPham-main/admin/thanh-vien">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Thành viên</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 

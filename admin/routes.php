@@ -34,6 +34,19 @@ return [
         'controller' => 'ProductController',
         'method' => 'dataFormAdd'
     ],
+    'thanh-vien' => [
+        'controller' => 'UserController',
+        'method' => 'viewAllUser'
+    ],
+    'thanh-vien/sua-thanh-vien/:id' => [
+        'controller' => 'UserController',
+        'method' => 'viewEdit'
+    ],
+    'cap-nhat-thanh-vien/:id' => [
+        'controller' => 'UserController',
+        'method' => 'editUser'
+    ],
+    
     'login' => [
         'controller' => 'UserController',
         'method' => 'login'

@@ -46,6 +46,10 @@ return [
         'controller' => 'UserController',
         'method' => 'editUser'
     ],
+    'thanh-vien/xoa-thanh-vien/:id' => [
+        'controller' => 'UserController',
+        'method' => 'deleteUser'
+    ],
     
     'login' => [
         'controller' => 'UserController',

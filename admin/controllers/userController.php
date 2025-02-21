@@ -65,4 +65,15 @@ class UserController
         }
     }
 
+    public function deleteUser($id){
+        $result = $this->userService->deleteUser($id);
+        if($result){
+                        
+            echo '<script>
+            alert("Xóa người dùng thành công");
+            window.location.href = "/VanPhongPham-main/admin/thanh-vien";
+            </script>';
+        }
+    }
+
 }

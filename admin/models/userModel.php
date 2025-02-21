@@ -112,5 +112,11 @@ class UserModel extends Connect{
         $param = [$data['name'], $data['image'], $data['phone'], $data['email'], $data['status'], $data['id_user_roles'], $data['id']];
         return $this->execute($sql, $param);
     }
+
+
+    public function deleteUser($id){
+        $sql ="DELETE FROM users WHERE id = ?";
+        return $this->execute($sql,[$id]);
+    }
 }
 ?>  

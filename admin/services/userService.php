@@ -32,5 +32,9 @@ class UserService {
         $data['id_user_roles'] = $dataUser_roles['id'];
         return $this->userModel->updateUser($data);
     }
+
+    public function deleteUser($id){
+        return $this->userModel->deleteUser($id);
+    }
 }
 ?>

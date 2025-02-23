@@ -38,7 +38,10 @@ return [
 
         ]
     ],
-
+    'chi-tiet/:id' => [
+        'controller' => 'ProductController',
+        'method' => 'detailView'
+    ],
 
 ];
 

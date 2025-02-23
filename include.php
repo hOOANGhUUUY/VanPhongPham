@@ -16,8 +16,12 @@ require_once 'middlewares/authMiddleware.php';
 require_once 'controllers/HomeController.php';
 require_once 'controllers/userController.php';
 require_once 'controllers/adminController.php';
+require_once 'controllers/productController.php';
+
 
 require_once 'views/homeView.php';
+require_once 'views/UserView.php';
+require_once 'views/ProductViewClient.php';
 
 
 ?>

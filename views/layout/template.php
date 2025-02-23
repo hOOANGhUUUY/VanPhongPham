@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="public/css/Grid.css">
-    <link rel="stylesheet" href="public/css/index.css">
+    <link rel="stylesheet" href="<?php if(isset($base_url)){echo $base_url;} ?>public/css/Grid.css">
+    <link rel="stylesheet" href="<?php if(isset($base_url)){echo $base_url;} ?>public/css/index.css">
     <?php if (isset($cssFile)) : ?>
-        <link rel="stylesheet" href="public/css/<?=$cssFile?>">
+        <link rel="stylesheet" href="<?php if(isset($base_url)){echo $base_url;} ?>public/css/<?=$cssFile?>">
     <?php endif; ?>
 
 
@@ -38,7 +38,7 @@
                     <section class="row home_banner">
                         <div class="col l-12 m-0 c-0 banner">
                             <div class="home_banner_top">
-                                <img src="public/images/LDPCTT1_herobanner15.01_Resize_1263x60.webp" alt="">
+                                <img src="<?php if(isset($base_url)){echo $base_url;} ?>public/images/LDPCTT1_herobanner15.01_Resize_1263x60.webp" alt="">
                             </div>
                         </div>
                     </section>
@@ -52,7 +52,7 @@
                 <section class="row home_menu">
                     <div class="col l-2 m-12 c-12 logo">
                         <div class="home_logo">
-                            <img src="public/images/fahasa-logo.webp" alt="">
+                            <img src="<?php if(isset($base_url)){echo $base_url;} ?>public/images/fahasa-logo.webp" alt="">
                         </div>
                     </div>
                     <div class="col l-1 m-2 c-2 menu">
@@ -119,8 +119,35 @@
                     </div>
                     <div class="col l-1 m-1 c-2 menu">
                         <div class="home_cart">
-                            <span><i class="fa-solid fa-shopping-cart"></i></span>
+                            <span>
+                                <i class="fa-solid fa-shopping-cart"></i>
+                                <span id="cart-count" class="cart-count">0</span>
+                                <span id="cart-count" class="cart-count">3</span>
+                            </span>
                             <span>Giỏ hàng</span>
+                            <div class="cart-items">
+                                <ul>
+
+                                    <li >
+                                        <img src="<?php if(isset($base_url)){echo $base_url;}?>public/images/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product 2">
+                                        <span>Product 2</span>
+                                        <span>Số lượng: 2</span>
+                                        <span>Giá: 200,000 VND</span>
+                                        <button class="remove-item">Xóa</button>
+                                    </li>
+                                    <li >
+                                        <img src="<?php if(isset($base_url)){echo $base_url;}?>public/images/z5962756846307_09f98e17033be0b3285bde3bf5e77df1.webp" alt="Product 3">
+                                        <span>Product 3</span>
+                                        <span>Số lượng: 1</span>
+                                        <span>Giá: 150,000 VND</span>
+                                        <button class="remove-item">Xóa</button>
+                                    </li>
+                                </ul>
+                                <div class="cart-summary">
+                                    <span>Tổng tiền: 650,000 VND</span>
+                                    <a href="" class="view-cart-btn">Xem giỏ hàng</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -277,6 +304,7 @@
     </div>
 
 </body>
-<script src="public/js/index.js"></script>
+<script src="<?php if(isset($base_url)){echo $base_url;} ?>public/js/index.js"></script>
+<script src="<?php if(isset($base_url)){echo $base_url;} ?>public/js/auth.js"></script>
 
 </html>

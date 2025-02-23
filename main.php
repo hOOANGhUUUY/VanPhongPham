@@ -17,6 +17,7 @@ foreach ($routes as $route => $action) {
     // Kiểm tra nếu có match và khởi tạo $matches
     if (preg_match("#^$routePattern$#", $uri, $matches)) {
         $routeFound = true;
+        array_shift($matches); // Loại bỏ phần khớp toàn bộ khỏi mảng matches
 
         // Kiểm tra và gọi các middleware
         if (isset($action['middlewares'])) {

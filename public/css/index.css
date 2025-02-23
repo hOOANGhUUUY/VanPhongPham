@@ -94,16 +94,124 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 .home_cart span:first-child {
     font-size: 24px;
     color: #333;
     margin-bottom: 5px;
+    position: relative;
+}
+
+.home_cart .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .home_cart span {
     white-space: nowrap; /* Ngăn chữ xuống dòng */
+}
+
+.home_cart .cart-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.home_cart:hover .cart-items {
+    display: block;
+}
+
+.home_cart .cart-items ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.home_cart .cart-items ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.home_cart .cart-items ul li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.home_cart .cart-items ul li span {
+    flex: 1;
+    font-size: 14px;
+}
+
+.home_cart .cart-items ul li .remove-item {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+}
+
+.home_cart .cart-items ul li .remove-item:hover {
+    background-color: darkred;
+}
+
+.home_cart .cart-items p {
+    padding: 10px;
+    text-align: center;
+    color: #666;
+}
+
+.home_cart .cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.home_cart .cart-summary span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.home_cart .view-cart-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.home_cart .view-cart-btn:hover {
+    background-color: #0056b3;
 }
 
 /* giỏ hàng  */

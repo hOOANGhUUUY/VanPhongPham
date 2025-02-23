@@ -530,7 +530,7 @@
                 if ($price_sale !== null) { ?>
                     <div class="col l-3 m-3 c-4">
                         <div class="product">
-                            <a href="#">
+                            <a href="chi-tiet/<?=$id?>">
                                 <div class="img">
                                     <img src="public/images/<?= $image ?>" alt="<?= $name ?>">
                                 </div>
@@ -565,7 +565,7 @@
                 <?php } else { ?>
                     <div class="col l-3 m-3 c-4">
                         <div class="product">
-                            <a href="#">
+                            <a href="chi-tiet/<?=$id?>">
                                 <div class="img">
                                     <img src="public/images/<?= $image ?>" alt="<?= $name ?>">
                                 </div>
